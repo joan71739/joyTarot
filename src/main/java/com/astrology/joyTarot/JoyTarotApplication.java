@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class JoyTarotApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JoyTarotApplication.class, args);
+		SpringApplication.run(JoyTarotApplication.class, args);  
 	}
 
 }
