@@ -6,6 +6,7 @@ import jakarta.servlet.SessionTrackingMode;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -13,6 +14,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.JdbcUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.firewall.StrictHttpFirewall;
 
 import javax.sql.DataSource;
 import java.util.EnumSet;
@@ -23,6 +25,8 @@ public class BasicAuthSecurityConfiguration {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+
+
 
         //目前此般本，首頁可以自由訪問，其他頁面需要登入，登入頁面為內建
         http.authorizeHttpRequests(auth -> auth.requestMatchers(
@@ -72,5 +76,13 @@ public class BasicAuthSecurityConfiguration {
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
+    public void configure(WebSecurity web) throws Exception {
+       StrictHttpFirewall firewall = new StrictHttpFirewall();
+       //configure the firewall instance....
+        web.httpFirewall(firewall);
+    }
+
+
 
 }

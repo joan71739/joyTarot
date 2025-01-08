@@ -25,12 +25,12 @@ public class RegisterController extends BaseController {
             model.put("registerMsg", "error");
             model.put("error", e.getMessage());
             System.out.println(e.getMessage());
-            System.err.println("註冊結束");
+            System.err.println("註冊失敗");
             return "member/register";
         }
         System.err.println("註冊完成");
         model.put("registerMsg", "success");
-        return "/login";
+        return "login";
     }
 
 
