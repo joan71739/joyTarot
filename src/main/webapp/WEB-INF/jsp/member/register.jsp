@@ -17,7 +17,7 @@
             </div>
         </c:if>
         <div class="row g-5 mt-2 dataFormRow">
-            <form id="rigsterForm" name="rigsterForm" action="/register" method="post" modelAttribute="registerForm"  class="needs-validation mt-0" novalidate="novalidate">
+            <form id="rigsterForm" name="rigsterForm" action="${pageContext.request.contextPath}/register" method="post" modelAttribute="registerForm"  class="needs-validation mt-0" novalidate="novalidate">
                 <div class="row g-3">
                     <div class="col-12">
                         <label for="name" class="form-label">姓名：</label>
@@ -61,7 +61,7 @@
 
                     <div class="form-check">
                         <input type="checkbox" id="privacy" name="privacy" class="form-check-input required" value="true" required="required">
-                        <label class="form-check-label" for="privacy">同意本站的<a href="/privacy">隱私權政策</a></label>
+                        <label class="form-check-label" for="privacy">同意本站的<a href="${pageContext.request.contextPath}/privacy">隱私權政策</a></label>
                         <div class="invalid-feedback">
                             請閱讀並勾選同意
                         </div>
@@ -80,7 +80,6 @@
     </div>
 </div>
 
-<script type="text/javascript" src="/vendor/jQuery/jquery-3.7.1.min.js" ></script>
 <script>
 
 

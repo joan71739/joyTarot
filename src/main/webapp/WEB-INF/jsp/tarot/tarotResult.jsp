@@ -18,7 +18,7 @@
                         <div class="card-header">現況</div>
                         <div class="card-body">
                             <h5 class="card-title">${randomTarotCards[0].name}</h5>
-                            <img width="190" height="330" src="/pic/tarot/${randomTarotCards[0].number}.jpg">
+                            <img width="190" height="330" src="${pageContext.request.contextPath}/static/pic/tarot/${randomTarotCards[0].number}.jpg">
                         </div>
                         <c:if test="${randomTarotCards[0].positive == true}">
                             <div class="card-footer text-muted bg-primary-subtle">正位</div>
@@ -49,7 +49,7 @@
                         <div class="card-header">${tarotCard.cardPosition}</div>
                         <div class="card-body">
                             <h5 class="card-title">${tarotCard.name}</h5>
-                            <img width="190" height="330" src="/pic/tarot/${tarotCard.number}.jpg">
+                            <img width="190" height="330" src="${pageContext.request.contextPath}/static/pic/tarot/${tarotCard.number}.jpg">
                         </div>
                         <c:if test="${tarotCard.positive == true}">
                             <div class="card-footer text-muted bg-primary-subtle">正位</div>
@@ -79,7 +79,7 @@
                             <div class="card-header text-info fw-bold">A選擇結果</div>
                             <div class="card-body">
                                 <h5 class="card-title">${randomTarotCards[3].name}</h5>
-                                <img width="95" height="165" src="/pic/tarot/${randomTarotCards[3].number}.jpg">
+                                <img width="95" height="165" src="${pageContext.request.contextPath}/static/pic/tarot/${randomTarotCards[3].number}.jpg">
                             </div>
                             <c:if test="${randomTarotCards[3].positive == true}">
                                 <div class="card-footer text-muted bg-primary-subtle">正位</div>
@@ -102,7 +102,7 @@
                             <div class="card-header text-success fw-bold">B選擇結果</div>
                             <div class="card-body">
                                 <h5 class="card-title">${randomTarotCards[4].name}</h5>
-                                <img width="95" height="165" src="/pic/tarot/${randomTarotCards[4].number}.jpg">
+                                <img width="95" height="165" src="${pageContext.request.contextPath}/static/pic/tarot/${randomTarotCards[4].number}.jpg">
                             </div>
                             <c:if test="${randomTarotCards[4].positive == true}">
                                 <div class="card-footer text-muted bg-primary-subtle">正位</div>
@@ -127,7 +127,7 @@
                             <div class="card-header text-info fw-bold">A選擇過程</div>
                             <div class="card-body">
                                 <h5 class="card-title">${randomTarotCards[1].name}</h5>
-                                <img width="95" height="165" src="/pic/tarot/${randomTarotCards[1].number}.jpg">
+                                <img width="95" height="165" src="${pageContext.request.contextPath}/static/pic/tarot/${randomTarotCards[1].number}.jpg">
                             </div>
                             <c:if test="${randomTarotCards[1].positive == true}">
                                 <div class="card-footer text-muted bg-primary-subtle">正位</div>
@@ -150,7 +150,7 @@
                             <div class="card-header text-success fw-bold">B選擇過程</div>
                             <div class="card-body">
                                 <h5 class="card-title">${randomTarotCards[2].name}</h5>
-                                <img width="95" height="165" src="/pic/tarot/${randomTarotCards[2].number}.jpg">
+                                <img width="95" height="165" src="${pageContext.request.contextPath}/static/pic/tarot/${randomTarotCards[2].number}.jpg">
                             </div>
                             <c:if test="${randomTarotCards[2].positive == true}">
                                 <div class="card-footer text-muted bg-primary-subtle">正位</div>
@@ -175,7 +175,7 @@
                             <div class="card-header">環境</div>
                             <div class="card-body">
                                 <h5 class="card-title">${randomTarotCards[0].name}</h5>
-                                <img width="95" height="165" src="/pic/tarot/${randomTarotCards[0].number}.jpg">
+                                <img width="95" height="165" src="${pageContext.request.contextPath}/static/pic/tarot/${randomTarotCards[0].number}.jpg">
                             </div>
                             <c:if test="${randomTarotCards[0].positive == true}">
                                 <div class="card-footer text-muted bg-primary-subtle">正位</div>

@@ -1,18 +1,22 @@
 package com.astrology.joyTarot.dao.facade;
 
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
 import com.astrology.joyTarot.dao.domain.Authorities;
 import com.astrology.joyTarot.dao.domain.Users;
-import com.astrology.joyTarot.dao.domain.UsersDetail;
+import com.astrology.joyTarot.dao.domain.UsersInfo;
 import com.astrology.joyTarot.form.RegisterForm;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.provisioning.JdbcUserDetailsManager;
-import org.springframework.stereotype.Service;
 
 
 @Service
-public class MyUsersDetailService extends BaseService {
+public class UsersInfoService extends BaseService {
 
+	public UsersInfo findByUser(Users user) {		
+		return usersInfoRepository.findByUser(user);
+	}
+	
+	
     public void save(RegisterForm registerForm){
         //帳號密碼及權限
 //        var user = User.withUsername(registerForm.getUsername())
@@ -27,7 +31,10 @@ public class MyUsersDetailService extends BaseService {
         users.setUsername(registerForm.getUsername());
         users.setPassword(new BCryptPasswordEncoder().encode(registerForm.getPassword()));
         users.setEnabled(1);
-        usersRepository.save(users);
+        Users user = usersRepository.save(users);
+        
+        System.out.println("UUID:"+user.getUuid());
+        
         Authorities authorities = new Authorities();
         authorities.setUsername(registerForm.getUsername());
         authorities.setAuthority("ROLE_USER");
@@ -35,13 +42,14 @@ public class MyUsersDetailService extends BaseService {
 
 
         //客戶資料
-        UsersDetail usersDetail = new UsersDetail();
-        usersDetail.setName(registerForm.getName());
-        usersDetail.setEmail(registerForm.getEmail());
-        usersDetail.setPrivacy(registerForm.isPrivacy());
-        usersDetail.setSubscription(registerForm.isSubscription());
+        UsersInfo usersInfo = new UsersInfo();
+        usersInfo.setUseruuid(user.getUuid());
+        usersInfo.setName(registerForm.getName());
+        usersInfo.setEmail(registerForm.getEmail());
+        usersInfo.setPrivacy(registerForm.isPrivacy());
+        usersInfo.setSubscription(registerForm.isSubscription());
         //執行新增
-        usersDetailRepository.save(usersDetail);
+        usersInfoRepository.save(usersInfo);
     }
 
     public BCryptPasswordEncoder passwordEncoder() {

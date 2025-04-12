@@ -12,7 +12,7 @@
             <h1 class="display-4 fst-italic">塔羅牌抽牌系統</h1>
             <p class="lead my-3 fw-normal">1.抽牌前請先靜心，深呼吸，念想問題後，按下抽牌按鈕。</p>
             <p class="lead my-3 fw-normal">2.短時間內不建議重複占卜。</p>
-            <p class="lead mb-0"><a href="/tarot/tarotAll" class="text-body-emphasis fw-bold">偉特塔羅牌組介紹</a></p>
+            <p class="lead mb-0"><a href="${pageContext.request.contextPath}/tarot/tarotAll" class="text-body-emphasis fw-bold">偉特塔羅牌組介紹</a></p>
         </div>
     </div>
 
@@ -32,7 +32,7 @@
                     </button>
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <img class="d-block" width="200" height="250" src="/pic/card/card.png">
+                    <img class="d-block" width="200" height="250" src="${pageContext.request.contextPath}/static/pic/card/card.png">
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
                     </button>
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <img class="d-block" width="200" height="250" src="/pic/card/3cards.png">
+                    <img class="d-block" width="200" height="250" src="${pageContext.request.contextPath}/static/pic/card/3cards.png">
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@
                     </button>
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                    <img class="d-block" width="200" height="250" src="/pic/card/5cards.png">
+                    <img class="d-block" width="200" height="250" src="${pageContext.request.contextPath}/static/pic/card/5cards.png">
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@
 </div>
 <script>
     function redirecToPage(cardCount){
-        window.location.href="/tarot/tarotResult?cardCount="+encodeURIComponent(cardCount);
+        window.location.href="${pageContext.request.contextPath}/tarot/tarotResult?cardCount="+encodeURIComponent(cardCount);
     }
 
 

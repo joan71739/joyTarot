@@ -6,7 +6,7 @@
         <h2>會員登入</h2>
         <p class="lead">加入會員可享有更多功能</p>
     </div>
-    <form action="/login" class="needs-validation" method="post">
+    <form action="${pageContext.request.contextPath}/login" class="needs-validation" method="post">
         <div class="row g-3 mb-5 dataFormRow">
             <%--            <div th:if="${param.error}" class="alert alert-error">Invalid username and password.</div>--%>
             <%--            <div th:if="${param.logout}" class="alert alert-success">You have been logged out.</div>--%>
@@ -54,7 +54,6 @@
 </div>
 </div>
 
-<script src="/vendor/jQuery/jquery-3.7.1.min.js"></script>
 <script>
 
     //密碼顯示關閉轉換
@@ -73,7 +72,7 @@
     //導至註冊頁面
 
     $('#registerBtn').click(function () {
-        window.location.href = "/register";
+        window.location.href = "${pageContext.request.contextPath}/register";
     });
 
 </script>

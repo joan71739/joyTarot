@@ -11,17 +11,17 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "USERS_DETAIL")
-public class UsersDetail {
+@Table(name = "USERS_INFO")
+public class UsersInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name="UUID")
     private String uuid;
 
-    @Column(name="USERNAME")
-    private String username;
-
+    @Column(name = "USERUUID")
+    private String useruuid;
+    
     @Column(name="NAME")
     private String name;
 
@@ -33,5 +33,9 @@ public class UsersDetail {
 
     @Column(name="SUBSCRIPTION")
     private Boolean subscription;
+    
+    @OneToOne
+    @JoinColumn(name = "USERUUID", referencedColumnName = "UUID", insertable = false, updatable = false)
+    private Users user;
 
 }

@@ -68,8 +68,6 @@
         </div>
     </div>
 </div>
-<script src="/vendor/jQuery/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
 

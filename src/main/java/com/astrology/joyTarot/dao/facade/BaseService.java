@@ -2,7 +2,7 @@ package com.astrology.joyTarot.dao.facade;
 
 import com.astrology.joyTarot.dao.AuthorityRepository;
 import com.astrology.joyTarot.dao.TarotCardRepository;
-import com.astrology.joyTarot.dao.UsersDetailRepository;
+import com.astrology.joyTarot.dao.UsersInfolRepository;
 import com.astrology.joyTarot.dao.UsersRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +32,7 @@ public abstract class BaseService {
     @Autowired
 	public TarotCardRepository tarotCardRepository;
     @Autowired
-	public UsersDetailRepository usersDetailRepository;
+	public UsersInfolRepository usersInfoRepository;
     @Autowired
     public AuthorityRepository authorityRepository;
     @Autowired

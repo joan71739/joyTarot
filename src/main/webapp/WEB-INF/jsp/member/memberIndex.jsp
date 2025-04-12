@@ -6,7 +6,7 @@
 <%--    <h1>Welcome MemberIndex ${name} !</h1>--%>
 
     <div class="py-5 text-center">
-        <h2>會員首頁</h2>
+        <h2>會員姓名： ${userInfo.name} 會員首頁</h2>
 <%--        <p class="lead">加入會員可享有更多功能</p>--%>
     </div>
 
@@ -49,7 +49,6 @@
 
 </div>
 
-<script src="/webjars/jquery/3.6.0/jquery.min.js"></script>
 <%--<script>--%>
 
 <%--//登入表單驗證--%>

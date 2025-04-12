@@ -20,7 +20,7 @@ public class RegisterController extends BaseController {
         System.err.println("註冊中");
 
         try {
-            myUsersDetailService.save(registerForm);
+        	usersInfoService.save(registerForm);
         }catch (Exception e) {
             model.put("registerMsg", "error");
             model.put("error", e.getMessage());

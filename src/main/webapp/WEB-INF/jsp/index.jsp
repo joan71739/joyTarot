@@ -10,21 +10,21 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-		<img class="d-block" height="70%" width="100%" src="/pic/123.jpg">
+		<img class="d-block" height="70%" width="100%" src="${pageContext.request.contextPath}/static/pic/123.jpg">
       	<div class="carousel-caption d-none d-md-block">
         	<h1>First slide label</h1>
         	<p>Some representative placeholder content for the first slide.</p>
       	</div>
     </div>
     <div class="carousel-item">
-      	<img class="d-block" height="70%" width="100%" src="/pic/456.jpeg">
+      	<img class="d-block" height="70%" width="100%" src="${pageContext.request.contextPath}/static/pic/456.jpeg">
       	<div class="carousel-caption d-none d-md-block">
         	<h1>First slide label</h1>
         	<p>Some representative placeholder content for the first slide.</p>
       	</div>
     </div>
     <div class="carousel-item">
-		<img class="d-block" height="70%" width="100%" src="/pic/image02.jpg">
+		<img class="d-block" height="70%" width="100%" src="${pageContext.request.contextPath}/static/pic/image02.jpg">
       	<div class="carousel-caption d-none d-md-block">
         	<h1>First slide label</h1>
         	<p>Some representative placeholder content for the first slide.</p>
